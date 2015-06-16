@@ -1,5 +1,6 @@
+
 function reverseIt(data){
- var stChar = String(data).split("");
+ var strChar = String(data).split("");
  var i = strChar.length;
  var revStr = "";
  for (var j = (i-1); j >= 0; j--){ 
@@ -7,4 +8,4 @@ function reverseIt(data){
  }
  console.log(revStr);
  }
- reverseIt("Godson");
+ reverseIt("");

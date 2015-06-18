@@ -1,0 +1,19 @@
+Array.prototype.shuffle = function(){
+    var i = this.length;
+    // use while loop to state shuffling condiions
+    while(--i > 0){       
+    var j = Math.floor(Math.random() * (i+1));
+    var temp = this[j];
+    this[j] = this[i];
+    this[i] = temp;
+    }
+    // alternative for loop
+    // for(var i = 7; i > 0; i--){temp = this[j];
+    // this[j] = this[i];
+    // this[i] = temp;}
+    return this;
+};
+    // can use any variabe name because of use of this in the whle loop
+var margie = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+var result = margie.shuffle();
+console.log(result);

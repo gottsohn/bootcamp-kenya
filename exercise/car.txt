@@ -1,0 +1,68 @@
+
+
+function Car( name, model,type ) {
+  
+      
+      //set name
+      
+   if (name === undefined){
+     this.name='General';
+   }
+   else{
+     
+     this.name= name;
+   }
+   
+   //set model
+   if (model === undefined){
+     this.model = 'GM';
+     
+   }
+   else{
+     
+     this.model = model;
+   }
+  
+  //set doors porsche speed
+  if (name ==='Porshe' ){
+    this.numOfDoors = 2;
+    this.speed = '250 km/h';
+  }
+  else if ( name === 'Koenigsegg'){
+    
+     this.numOfDoors=2;
+     this.isSaloon = true;
+  }
+  
+    else{
+    this.numOfDoors=4;
+  }
+  // create wheels
+  if (type === 'trailer'){
+    this.numOfWheels =8;
+    this.isSaloon = false;
+  }
+  else {
+      this.numOfWheels =4;
+  }
+  
+  
+  
+  
+  this.drive = function (gears) { 
+    switch (gears){
+      
+      case 5:
+        return this.speed = '250 km/h';
+      break;
+      
+      case 7:
+        return this.speed ='77 km/h';
+      break;
+      return true;
+    }
+    
+  }
+  
+}
+var car =new Car();

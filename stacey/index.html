@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8" />
+    <title> Hello jQuery </title>
+  </head>
+  <body>
+    <h1> Hello jQuery </h1>
+    <ul class="langs"></ul>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+  </body>
+  <script type="text/javascript" src= "jquery-1.11.3.min.js"></script>
+  <script>
+    var h1 = $("h1");
+    console.log(h1);
+    h1.css({color:'red'});
+
+    var para = $("p"); 
+    console.log(para);
+
+    for (var i = 0; i < 10; i++) {  //to append the paragraph 10 times
+    	var pclone = para.clone(); //to make a copy of selector p before appending
+    	 $("body").append(pclone); //append the graph;
+    }
+
+    var langs =["C++", "JavaScript", "Python", "Scala"];
+    /* for loop to print the array as part of the body...this is a longer method */
+    for(var x = 0; x < langs.length; x++) {
+    	$("ul.langs").append('<li>' + langs[x] +'</li>');
+    }
+    //<br>
+
+    /*ALTERNATIVELY, the .forEach() method of JavaScript to print the values of the array as lists */
+   langs.forEach( function(value) {
+    	$("ul.langs").append("<li>"+ value + "</li>");
+    	console.log(value);
+    });
+   //<br>
+   /* ALTERNATIVELY, the jQuery .each method to print the list */ 
+   $.each(langs, function(key,value) {
+   	 $("ul.langs").append("<li>" + value + "</li>");
+
+   });
+
+  
+  </script>
+</html>

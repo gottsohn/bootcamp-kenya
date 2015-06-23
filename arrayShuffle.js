@@ -1,4 +1,4 @@
-rray.prototype.shuffle=function(){
+Array.prototype.shuffle=function(){
    
        var i = this.length,j,temp; 
            while (--i > 0) {

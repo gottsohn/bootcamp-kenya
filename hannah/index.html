@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>	Hello jQuery</title>
+	</head>
+	<body>
+		<h1>Hello jQuery</h1>
+		<ul class="langs"></ul>
+		<ol class="langs"></ol>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</body>
+		<script type="text/javascript" src ="jquery-2.1.4.min.js"></script>
+		<script>
+			var h1 = $("h1");
+			console.log(h1);
+			h1.css({color:"red"});
+			var para=[];
+			console.log(para);
+			for (var i = 0 ; i < 10; i++) {
+				para[i]=$("p").clone();
+			}
+			$("body").append(para);
+			var langs = [ "C++" , "JavaScript" , "Python" ];
+			for (var j = 0 ; j < langs.length; j++) {
+				$("ol").append("<li>"+langs[j]+"</li>");
+			}
+			langs.forEach(function(k,v) {
+				$("ul.langs").append("<li>"+v+"</li>");
+				console.log(k,v);
+			});
+		</script>
+</html>

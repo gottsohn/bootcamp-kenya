@@ -19,5 +19,5 @@ $.each(imgs, function(k,v){
 
 
 var imgs = $("img");
-$("img").[0] ("img")
-$("img").get(0)
+$("img").[0] ("img");
+$("img").get(0);

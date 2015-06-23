@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <!-- Add your site or application content here -->
+    <h1>jQuery Playground</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <script src="jquery.min.js"></script>
+    <script>
+        var h1 = $('h1');
+        // console.log(h1);
+
+        h1.css({
+            backgroundColor: 'red',
+            color: 'white',
+            padding: '5px 10px'
+        });
+
+        var p = $('p'); // .text();
+        // console.log(p);
+        p.css({fontFamily: "Verdana"})
+
+        for(var x = 0; x < 10; x++) {
+            pc = p.clone()
+            $('body').append(pc);
+        }
+    </script>
+</body>
+
+</html>

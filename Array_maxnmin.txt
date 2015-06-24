@@ -1,0 +1,30 @@
+Array.prototype.min= function() {
+    var min = this[0];
+    for (var i = 0; i < this.length; i++){
+        
+        if (this[i] < min) {
+            min=this[i];
+        }
+        
+           }
+    return min;
+}
+
+var a= [9,8,10,33,77,1];
+a.min();
+
+
+Array.prototype.max= function() {
+    var maxi = this[0];
+    for (var i = 0; i < this.length; i++){
+        
+        if (this[i] > maxi ) {
+            maxi=this[i];
+        }
+        
+           }
+    return maxi;
+}
+
+var a= [9,8,10,33,77,1];
+a.max();
